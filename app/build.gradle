@@ -81,6 +81,11 @@ dependencies {
     //logger
     implementation 'com.orhanobut:logger:2.2.0'
 
+    //implementation 'com.android.support:asynclayoutinflater:28.0.0'
+    //掌阅 X2C
+    annotationProcessor 'com.zhangyue.we:x2c-apt:1.1.2'
+    implementation 'com.zhangyue.we:x2c-lib:1.0.6'
+
     //面向切面编程,想切哪就切哪,目前项目中主要用于获取类中的方法的执行时间
     implementation 'org.aspectj:aspectjrt:1.8.+'
 }

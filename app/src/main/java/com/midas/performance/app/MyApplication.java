@@ -36,7 +36,7 @@ public class MyApplication extends Application {
         super.onCreate();
         mApplication = this;
         initTasks();
-
+        LaunchTimer.endRecord();
     }
 
     private void initTasks() {
@@ -53,7 +53,6 @@ public class MyApplication extends Application {
                 .addTask(new InitLoggerTask())
                 .start();
         dispatcher.await();
-        LaunchTimer.endRecord();
     }
 
 
