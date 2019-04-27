@@ -89,6 +89,9 @@ dependencies {
     implementation ('com.aliyun.ams:alicloud-android-httpdns:1.1.7@aar') {
         transitive true
     }
+    //AOP Hook 框架 可以拦截本进程内部几乎任意的 Java 方法调用
+    implementation 'me.weishu:epic:0.3.6'
+
     //面向切面编程,想切哪就切哪,目前项目中主要用于获取类中的方法的执行时间
     implementation 'org.aspectj:aspectjrt:1.8.+'
 }
