@@ -4,8 +4,6 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 
-import cn.jpush.android.api.JPushInterface;
-
 /**
  * @author midas
  * @date : 2019-04-24
@@ -15,7 +13,7 @@ public class MyReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         switch (intent.getAction()) {
 
-            case JPushInterface.ACTION_REGISTRATION_ID:
+        /*    case JPushInterface.ACTION_REGISTRATION_ID:
                 System.out.println("JPush用户注册成功");
                 break;
 
@@ -32,7 +30,7 @@ public class MyReceiver extends BroadcastReceiver {
                 break;
 
             default:
-                break;
+                break;*/
 
         }
     }

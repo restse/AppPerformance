@@ -18,7 +18,7 @@ android {
         }
         manifestPlaceholders = [
                 JPUSH_PKGNAME: applicationId,
-                JPUSH_APPKEY : "000000000", //JPush 上注册的包名对应的 Appkey.
+                JPUSH_APPKEY : "000000000000", //JPush 上注册的包名对应的 Appkey.
                 JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
         ]
 
@@ -86,6 +86,9 @@ dependencies {
     annotationProcessor 'com.zhangyue.we:x2c-apt:1.1.2'
     implementation 'com.zhangyue.we:x2c-lib:1.0.6'
 
+    implementation ('com.aliyun.ams:alicloud-android-httpdns:1.1.7@aar') {
+        transitive true
+    }
     //面向切面编程,想切哪就切哪,目前项目中主要用于获取类中的方法的执行时间
     implementation 'org.aspectj:aspectjrt:1.8.+'
 }

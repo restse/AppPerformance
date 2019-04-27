@@ -22,7 +22,7 @@ public class PerformanceAop {
      * 获取MyApplication中的方法的时间
      * @param joinPoint
      */
-    @Around("call(* com.midas.performance.app.MyApplication.**(..))")
+    @Around("call(* com.midas.performance.app.MyApplication**(..))")
     public void getTime(ProceedingJoinPoint joinPoint) {
         Signature signature = joinPoint.getSignature();
         String name = signature.toShortString();
