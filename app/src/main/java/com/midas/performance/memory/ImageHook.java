@@ -12,7 +12,7 @@ import com.midas.performance.utils.LogUtils;
 import com.taobao.android.dexposed.XC_MethodHook;
 
 /**
- * @author Dell
+ * @author midas
  * @date 2019/4/27
  * <p>
  * Hook Image
