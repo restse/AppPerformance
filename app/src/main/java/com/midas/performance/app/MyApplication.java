@@ -15,6 +15,7 @@ import com.midas.performance.tasks.InitFrescoTask;
 import com.midas.performance.tasks.InitJPushTask;
 import com.midas.performance.tasks.InitLoggerTask;
 import com.midas.performance.tasks.InitStethoTask;
+import com.midas.performance.tasks.InitTbsTask;
 import com.midas.performance.tasks.InitUmengTask;
 import com.midas.performance.tasks.InitWeexTask;
 import com.midas.performance.utils.LaunchTimer;
@@ -60,6 +61,7 @@ public class MyApplication extends Application {
                 .addTask(new InitStethoTask())
                 .addTask(new GetDeviceIdTask())
                 .addTask(new InitLoggerTask())
+                .addTask(new InitTbsTask())
                 .start();
         dispatcher.await();
     }

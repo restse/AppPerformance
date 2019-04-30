@@ -82,11 +82,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".memory.MemoryLeakActivity" />
-
         <activity android:name=".memory.MemoryShakeActivity" />
 
+        <!--WebView独立进程-->
+        <activity
+            android:name=".ui.TbsX5WebViewActivity"
+            android:process=":webView" />
     </application>
 
 </manifest>

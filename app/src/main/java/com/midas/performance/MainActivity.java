@@ -24,6 +24,7 @@ import com.midas.performance.memory.MemoryShakeActivity;
 import com.midas.performance.net.RetrofitNewsUtils;
 import com.midas.performance.tasks.delayinittask.DelayInitTaskA;
 import com.midas.performance.tasks.delayinittask.DelayInitTaskB;
+import com.midas.performance.ui.TbsX5WebViewActivity;
 import com.midas.performance.ui.adapter.NewsAdapter;
 import com.midas.performance.ui.adapter.OnFeedShowCallBack;
 import com.midas.performance.ui.bean.NewsItem;
@@ -201,6 +202,9 @@ public class MainActivity extends AppCompatActivity implements OnFeedShowCallBac
                 break;
             case 1:
                 startActivity(new Intent(this, MemoryLeakActivity.class));
+                break;
+            case 2:
+                startActivity(new Intent(this, TbsX5WebViewActivity.class));
                 break;
             default:
                 break;
