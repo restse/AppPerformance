@@ -76,19 +76,16 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
 
         NewsItem newsItem = mItems.get(position);
 
-        // 以下代码是为了演示字符串的拼接
-        String msgOld = newsItem.title + newsItem.targetId;// 原有方式
-
+        // 以下代码是为了演示字符串的拼接 // 原有方式
+        String msgOld = newsItem.title + newsItem.targetId;
+        // 建议使用方式，不要小看这点优化
         StringBuilder builder = new StringBuilder();
         builder.append(newsItem.title)
-                .append(newsItem.targetId);// 建议使用方式，不要小看这点优化
+                .append(newsItem.targetId);
         String msgNew = builder.toString();
-
         holder.textView.setText(newsItem.title);
-
         Uri uri = Uri.parse(newsItem.imgurl);
         holder.imageView.setImageURI(uri);
-
 
         holder.layout.setOnClickListener(new View.OnClickListener() {
             @Override
