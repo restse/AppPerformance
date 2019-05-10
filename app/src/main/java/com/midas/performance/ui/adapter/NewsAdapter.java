@@ -1,6 +1,7 @@
 package com.midas.performance.ui.adapter;
 
 import android.net.Uri;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.RecyclerView;
@@ -12,8 +13,10 @@ import android.widget.TextView;
 
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.midas.performance.R;
+import com.midas.performance.net.ConfigManager;
 import com.midas.performance.ui.bean.NewsItem;
 import com.midas.performance.utils.LaunchTimer;
+import com.midas.performance.wakelock.WakeLockUtils;
 
 import java.util.List;
 
@@ -90,18 +93,17 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
         holder.layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                // ConfigManager.sOpenClick模拟的是功能的开关
-//                if(ConfigManager.sOpenClick){
-//                    // 此处模拟的是WakeLock使用的兜底策略
-//                    WakeLockUtils.acquire(holder.imageView.getContext());
-//                    new Handler().postDelayed(new Runnable() {
-//                        @Override
-//                        public void run() {
-//                            WakeLockUtils.release();
-//                        }
-//                    },200);
-//                }
+                // ConfigManager.sOpenClick;模拟的是功能的开关
+                if(ConfigManager.sOpenClick){
+                    // 此处模拟的是WakeLock使用的兜底策略
+                    WakeLockUtils.acquire(holder.imageView.getContext());
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            WakeLockUtils.release();
+                        }
+                    },200);
+                }
                 // 以下代码是为了演示Luban这个库对图片压缩对流量方面的影响
 //                Luban.with(holder.imageView.getContext())
 //                        .load(Environment.getExternalStorageDirectory()+"/Android/1.jpg")

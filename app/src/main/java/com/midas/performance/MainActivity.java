@@ -1,7 +1,11 @@
 package com.midas.performance;
 
+import android.app.job.JobInfo;
+import android.app.job.JobScheduler;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -22,6 +26,7 @@ import com.midas.performance.launchstarter.DelayInitDispatcher;
 import com.midas.performance.memory.MemoryLeakActivity;
 import com.midas.performance.memory.MemoryShakeActivity;
 import com.midas.performance.net.RetrofitNewsUtils;
+import com.midas.performance.service.JobSchedulerService;
 import com.midas.performance.tasks.delayinittask.DelayInitTaskA;
 import com.midas.performance.tasks.delayinittask.DelayInitTaskB;
 import com.midas.performance.ui.TbsX5WebViewActivity;
@@ -143,6 +148,19 @@ public class MainActivity extends AppCompatActivity implements OnFeedShowCallBac
         });
     }
 
+    /**
+     * 演示JobScheduler的使用
+     */
+    private void startJobScheduler() {
+        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP) {
+            JobScheduler jobScheduler = (JobScheduler) getSystemService(Context.JOB_SCHEDULER_SERVICE);
+            JobInfo.Builder builder = new JobInfo.Builder(1, new ComponentName(getPackageName(),
+                    JobSchedulerService.class.getName()));
+            builder.setRequiresCharging(true)
+                    .setRequiredNetworkType(JobInfo.NETWORK_TYPE_UNMETERED);
+            jobScheduler.schedule(builder.build());
+        }
+    }
 
     /**
      * 获取数据
