@@ -2,6 +2,16 @@ apply plugin: 'com.android.application'
 apply plugin: 'android-aspectjx'//面向切面编程,想切哪就切哪,目前项目中主要用于获取类中的方法的执行时间
 
 android {
+
+    signingConfigs {
+        midas {
+            keyAlias 'key'
+            keyPassword '123456'
+            storeFile file('midas.jks')
+            storePassword '123456'
+        }
+    }
+
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.midas.performance"
@@ -14,7 +24,7 @@ android {
         //bugly
         ndk {
             // 设置支持的SO库架构
-            abiFilters 'armeabi' //, 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+            abiFilters 'armeabi', 'x86' //, 'armeabi-v7a', 'x86_64', 'arm64-v8a'
         }
         manifestPlaceholders = [
                 JPUSH_PKGNAME: applicationId,
@@ -24,10 +34,9 @@ android {
 
         multiDexEnabled true
     }
-
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }

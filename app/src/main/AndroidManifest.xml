@@ -85,6 +85,9 @@
         <activity android:name=".memory.MemoryLeakActivity" />
         <activity android:name=".memory.MemoryShakeActivity" />
 
+        <service android:name=".service.JobSchedulerService"
+            android:permission="android.permission.BIND_JOB_SERVICE"/>
+
         <!--WebView独立进程-->
         <activity
             android:name=".ui.TbsX5WebViewActivity"
