@@ -13,4 +13,7 @@
 - 工具：Memory Profiler 、Memory Analyzer 、LeakCanary
 - 内存泄漏 之 MAT工具 [MAT](https://www.eclipse.org/mat/downloads.php)
 - ARTHook检测不合理图片 [AOP Hook](https://github.com/tiann/epic)
+#### 电量优化
+- 工具：[Battery Historian](https://github.com/google/battery-historian)
+
 
