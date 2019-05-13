@@ -20,7 +20,7 @@ public class MemoryLeakActivity extends AppCompatActivity implements CallBack{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_memoryleak);
         ImageView imageView = findViewById(R.id.iv_memoryleak);
-        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.splash);
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.ycy);
         imageView.setImageBitmap(bitmap);
 
         CallBackManager.addCallBack(this);

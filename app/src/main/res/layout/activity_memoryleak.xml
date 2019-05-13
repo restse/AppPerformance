@@ -5,7 +5,7 @@
 
     <ImageView
         android:id="@+id/iv_memoryleak"
-        android:layout_width="50dp"
-        android:layout_height="50dp" />
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
 
 </android.support.constraint.ConstraintLayout>
