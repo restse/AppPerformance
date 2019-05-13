@@ -65,15 +65,15 @@ public class ImageCacheAdapter extends BaseAdapter {
             //如果磁盘中也没缓存,就从网络下载
             if(null==bitmap){
                 bitmap= ImageResize.resizeBitmap(context,R.drawable.ycy,100,100,false,reusable);
-                ImageCache.getInstance().putBitmapToMemeory(String.valueOf(position),bitmap);
+                ImageCache.getInstance().putBitmapToMemory(String.valueOf(position),bitmap);
                 ImageCache.getInstance().putBitMapToDisk(String.valueOf(position),bitmap);
-                Log.i("midas","从网络加载了数据");
+                Log.i("midas---","从网络加载了数据");
             }else{
-                Log.i("midas","从磁盘中加载了数据");
+                Log.i("midas---","从磁盘中加载了数据");
             }
 
         }else{
-            Log.i("midas","从内存中加载了数据");
+            Log.i("midas---","从内存中加载了数据");
         }
 
 

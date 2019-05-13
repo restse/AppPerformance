@@ -40,6 +40,9 @@ public class ImageCache {
      */
     private static Set<WeakReference<Bitmap>> reusablePool;
 
+    /**
+     * 单例
+     */
     private ImageCache() {
     }
 
@@ -141,7 +144,7 @@ public class ImageCache {
         getReferenceQueue();
     }
 
-    public void putBitmapToMemeory(String key, Bitmap bitmap) {
+    public void putBitmapToMemory(String key, Bitmap bitmap) {
         memoryCache.put(key, bitmap);
     }
 
@@ -238,7 +241,7 @@ public class ImageCache {
     /**
      * 从磁盘缓存中取
      */
-    public Bitmap getBitmapFromDisk(String key, Bitmap reuseable) {
+    public Bitmap getBitmapFromDisk(String key, Bitmap reusable) {
         DiskLruCache.Snapshot snapshot = null;
         Bitmap bitmap = null;
         try {
@@ -250,7 +253,7 @@ public class ImageCache {
             InputStream is = snapshot.getInputStream(0);
             //解码个图片，写入
             options.inMutable = true;
-            options.inBitmap = reuseable;
+            options.inBitmap = reusable;
             bitmap = BitmapFactory.decodeStream(is, null, options);
             if (null != bitmap) {
                 memoryCache.put(key, bitmap);
