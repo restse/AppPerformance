@@ -15,5 +15,9 @@
 - ARTHook检测不合理图片 [AOP Hook](https://github.com/tiann/epic)
 #### 电量优化
 - 工具：[Battery Historian](https://github.com/google/battery-historian)
+#### 图片优化
+- 三级缓存
+
+
 
 
