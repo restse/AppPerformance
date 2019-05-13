@@ -64,9 +64,8 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
-    <!--唤醒锁-->
-    <uses-permission android:name="android.permission.WAKE_LOCK"/>
-
+    <!-- 唤醒锁 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
         android:name=".app.MyApplication"
@@ -89,13 +88,16 @@
         <activity android:name=".memory.MemoryLeakActivity" />
         <activity android:name=".memory.MemoryShakeActivity" />
 
-        <service android:name=".service.JobSchedulerService"
-            android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service
+            android:name=".service.JobSchedulerService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
 
-        <!--WebView独立进程-->
+        <!-- WebView独立进程 -->
         <activity
             android:name=".ui.TbsX5WebViewActivity"
             android:process=":webView" />
+
+        <activity android:name=".ui.ImageCacheActivity"/>
     </application>
 
 </manifest>
