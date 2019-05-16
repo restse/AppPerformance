@@ -96,8 +96,9 @@
         <activity
             android:name=".ui.TbsX5WebViewActivity"
             android:process=":webView" />
+        <activity android:name=".ui.ImageCacheActivity" />
 
-        <activity android:name=".ui.ImageCacheActivity"/>
+        <activity android:name=".ui.BigViewActivity" />
     </application>
 
 </manifest>

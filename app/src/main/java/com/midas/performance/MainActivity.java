@@ -29,6 +29,7 @@ import com.midas.performance.net.RetrofitNewsUtils;
 import com.midas.performance.service.JobSchedulerService;
 import com.midas.performance.tasks.delayinittask.DelayInitTaskA;
 import com.midas.performance.tasks.delayinittask.DelayInitTaskB;
+import com.midas.performance.ui.BigViewActivity;
 import com.midas.performance.ui.ImageCacheActivity;
 import com.midas.performance.ui.TbsX5WebViewActivity;
 import com.midas.performance.ui.adapter.NewsAdapter;
@@ -225,8 +226,11 @@ public class MainActivity extends AppCompatActivity implements OnFeedShowCallBac
             case 2:
                 startActivity(new Intent(this, TbsX5WebViewActivity.class));
                 break;
-                case 3:
+            case 3:
                 startActivity(new Intent(this, ImageCacheActivity.class));
+                break;
+            case 4:
+                startActivity(new Intent(this, BigViewActivity.class));
                 break;
             default:
                 break;

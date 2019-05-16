@@ -130,7 +130,6 @@ dependencies {
 
     compileOnly 'me.ele:lancet-base:1.0.4'
 
-
     //面向切面编程,想切哪就切哪,目前项目中主要用于获取类中的方法的执行时间
     implementation 'org.aspectj:aspectjrt:1.8.+'
     implementation files('libs/tbs_sdk_thirdapp_v4.3.0.jar')
