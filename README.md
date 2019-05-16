@@ -17,6 +17,7 @@
 - 工具：[Battery Historian](https://github.com/google/battery-historian)
 #### 图片优化
 - 三级缓存
+- 长图优化
 
 
 
