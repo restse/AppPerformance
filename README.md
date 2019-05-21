@@ -1,6 +1,6 @@
 # AppPerformance
 #### App启动优化 
-- 1.伪优化：闪屏页Theme设置
+- 1.伪优化：闪屏页Theme设置[APP启动时黑白屏的根源解析](https://blog.csdn.net/crazymo_/article/details/79949334)
 - 2.异步延迟懒加载
 #### 布局优化
 - 1.AsyncLayoutInflater [Android AsyncLayoutInflater](https://www.jianshu.com/p/f0c0eda06ae4)
